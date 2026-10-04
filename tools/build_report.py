@@ -32,16 +32,16 @@ pages = [
         ("p", f"Name: {args.name}    |    Group: {args.group}"),
         ("p", f"Source repository: {args.repository}"),
         ("h", "Project and setup"),
-        ("p", "This project is a fan-made Jamie Paige listening guide. The page includes an introduction, three reasons to listen, an album collection and a questions section. It uses local artwork and links to official music sources."),
+        ("p", "This project is a simple Jamie Paige fan page. It has four sections: an introduction, About the music, albums and frequently asked questions. The page uses local album images, a plain font and standard Bootstrap components."),
         ("p", "index.html connects Bootstrap 5.3.8 CSS from its CDN, followed by style.css. The viewport meta tag sets the layout width to the device width. The Bootstrap JavaScript bundle appears before the closing body tag and powers the menu and accordion."),
         ("h", "Task 1 · A section with custom media queries"),
-        ("p", "The #values section uses only custom classes. Its .values-grid starts with one column. At min-width: 768px it changes to two columns; at min-width: 1200px it changes to three. The media queries also adjust the heading size and spacing. This is mobile-first because the narrow layout works before either media query applies."),
+        ("p", "The About the music section (#values) uses only custom classes. Its .values-grid starts with one column. At min-width: 768px it changes to two columns; at min-width: 1200px it changes to three. At 768px, the heading grows from 1.5rem to 1.75rem and the gap grows from 1rem to 1.5rem. This is mobile-first because the phone layout works before either media query applies."),
         ("image", "values-1280.png", "Figure 1. Three custom CSS columns at a 1280 px viewport.", 6.65, 2.45),
         ("p", "Technical references: https://getbootstrap.com/docs/5.3/getting-started/introduction/ and https://getbootstrap.com/docs/5.3/layout/grid/. Artwork credits and official album sources are recorded in assets/CREDITS.md; README.md includes the component documentation links."),
     ],
     [
         ("h", "Task 1 · Phone and tablet evidence"),
-        ("p", "At 375 px, each reason occupies its own row. At 768 px, two reasons share the first row and the third continues below. CSS Grid handles the remaining space without fixed item widths or absolute positioning. The screenshots below show the same section at two viewport widths."),
+        ("p", "The three panels describe electronic pop, synthesized vocals and albums. At 375 px, each panel has its own row. At 768 px, two panels share the first row and the third continues below. CSS Grid shares the available space without fixed panel widths or absolute positioning."),
         ("images", [
             ("values-375.png", "Figure 2. 375 px: one column.", 2.05, 7.1),
             ("values-768.png", "Figure 3. 768 px: two columns.", 4.2, 7.1),
@@ -56,7 +56,7 @@ pages = [
     ],
     [
         ("h", "Task 2 · Mobile order and interactive components"),
-        ("p", "The .navbar-expand-lg navigation collapses below 992 px. Its menu button reveals links to the page sections. The introduction's slogan uses .d-none .d-md-inline, hiding below 768 px; the decorative FAQ flower uses .d-none .d-lg-block. The FAQ is a Bootstrap accordion: its buttons reveal answers through data-bs-* attributes, so the page does not need custom JavaScript."),
+        ("p", "The .navbar-expand-lg navigation collapses below 992 px. Its menu button shows links to the page sections. The Unofficial fan page note uses .d-none .d-md-block, so it is hidden below 768 px. The FAQ is a Bootstrap accordion: its buttons show answers using data-bs-* attributes. The page does not need custom JavaScript."),
         ("p", "These phone captures show the introduction with text first, the expanded menu, and an open answer. Browser checks also verify all three required viewport widths, both grids, section links, interactive controls and the absence of horizontal scrolling."),
         ("images", [
             ("about-375.png", "Figure 6. Text comes first at 375 px.", 2.12, 7.0),
@@ -71,13 +71,13 @@ pages = [
             ("releases-1280.png", "Bootstrap at 1280 px (detail: Figure 4).", 3.18, 1.3),
         ]),
         ("table", [
-            ["Aspect", "Custom CSS: reasons to listen", "Bootstrap: albums and introduction"],
+            ["Aspect", "Custom CSS: About the music", "Bootstrap: albums and introduction"],
             ["Responsive code", "The .values-grid rule defines the base layout; two min-width media queries change its column count.", "The album columns use col-12 col-md-6 col-xl-4. Bootstrap already defines the breakpoint rules."],
-            ["Design control", "The values section's heading size, gap and section spacing are adjusted directly in style.css.", "The grid supplies column widths and gutters. Custom CSS supplies the pink palette, type and card appearance."],
+            ["Design control", "The heading size and gap change in my own media query in style.css.", "Bootstrap supplies column widths, gutters and the standard card appearance. I use its spacing classes."],
             ["Changing the layout", "To change the desktop count, edit grid-template-columns in the 1200 px media query.", "To change the desktop count, edit each album's col-xl-* class; the CSS framework supplies the widths."],
-            ["Built-in behavior", "CSS Grid handles the repeating values, but does not provide an interactive menu or FAQ.", "The Bootstrap bundle handles navbar collapse and accordion state through data attributes."],
+            ["Built-in behavior", "CSS Grid arranges the three information panels. It does not provide an interactive menu or FAQ.", "The Bootstrap bundle handles navbar collapse and accordion state through data attributes."],
         ]),
-        ("p", "I would choose custom media queries for a small section that needs its own spacing and layout rules, such as the reasons-to-listen grid. I would choose Bootstrap when several page sections need consistent responsive columns and standard components, as with the albums, navigation and FAQ. Combining them works here because the custom section stays independent while the rest reuses Bootstrap."),
+        ("p", "I would use custom media queries for a small section like About the music, where I want to set the columns and gaps directly. I would use Bootstrap for a whole page that needs common layouts and components, such as the album cards, menu and FAQ. Using both here lets me practise writing responsive CSS and using a framework."),
         ("h", "Conclusion"),
         ("p", "This page shows how a mobile-first layout grows from one column to several columns as more space becomes available. The main difference is where the responsive rules live: in my own media queries or in Bootstrap's predefined classes. Testing at 375, 768 and 1280 px also makes it easier to catch ordering problems, overflow and controls that are difficult to use on a phone."),
         ("p", "Validation: tests/check_page.py passed at 320, 375, 768, 1024, 1280 and 1440 px, including both grids, section links, menu and accordion keyboard controls, image loading and no horizontal overflow."),
@@ -123,21 +123,21 @@ normal.paragraph_format.space_after = Pt(7)
 normal.paragraph_format.line_spacing = 1.08
 for heading in ("Title", "Heading 1", "Subtitle"):
     document.styles[heading].font.name = "Calibri"
-    document.styles[heading].font.color.rgb = RGBColor.from_string("35252B")
+    document.styles[heading].font.color.rgb = RGBColor.from_string("222222")
 document.styles["Title"].font.size = Pt(25)
 document.styles["Heading 1"].font.size = Pt(16)
 document.styles["Heading 1"].paragraph_format.space_before = Pt(8)
 document.styles["Heading 1"].paragraph_format.space_after = Pt(8)
 document.styles["Subtitle"].font.size = Pt(12)
 document.styles["Caption"].font.size = Pt(8)
-document.styles["Caption"].font.color.rgb = RGBColor.from_string("655B60")
+document.styles["Caption"].font.color.rgb = RGBColor.from_string("555555")
 document.styles["Caption"].paragraph_format.space_after = Pt(6)
 section.footer.paragraphs[0].text = f"Assignment 3 | {args.name} | {args.group}"
 section.footer.paragraphs[0].style = "Caption"
 
 styles = getSampleStyleSheet()
 styles.add(ParagraphStyle("Body", fontName="Helvetica", fontSize=10, leading=14, spaceAfter=9))
-styles.add(ParagraphStyle("CaptionSmall", fontSize=8, leading=11, textColor=colors.HexColor("#655b60"), spaceAfter=9))
+styles.add(ParagraphStyle("CaptionSmall", fontSize=8, leading=11, textColor=colors.HexColor("#555555"), spaceAfter=9))
 styles.add(ParagraphStyle("TableBody", fontSize=8.3, leading=11))
 styles["Title"].fontSize, styles["Title"].leading = 26, 31
 styles["Heading1"].fontSize, styles["Heading1"].leading = 16, 20
@@ -192,7 +192,7 @@ for page_number, page in enumerate(pages):
                     for run in cell.paragraphs[0].runs:
                         run.font.size = Pt(9)
             pdf_table = Table([[Paragraph(escape(value), styles["TableBody"]) for value in row] for row in item[1]], colWidths=[1.13 * inch, 2.76 * inch, 2.76 * inch])
-            pdf_table.setStyle(TableStyle([("BACKGROUND", (0, 0), (-1, 0), colors.HexColor("#f5e2e9")), ("VALIGN", (0, 0), (-1, -1), "TOP"), ("GRID", (0, 0), (-1, -1), 0.5, colors.HexColor("#d7c6cd")), ("TOPPADDING", (0, 0), (-1, -1), 8), ("BOTTOMPADDING", (0, 0), (-1, -1), 8)]))
+            pdf_table.setStyle(TableStyle([("BACKGROUND", (0, 0), (-1, 0), colors.HexColor("#eeeeee")), ("VALIGN", (0, 0), (-1, -1), "TOP"), ("GRID", (0, 0), (-1, -1), 0.5, colors.HexColor("#cccccc")), ("TOPPADDING", (0, 0), (-1, -1), 8), ("BOTTOMPADDING", (0, 0), (-1, -1), 8)]))
             pdf.extend([pdf_table, Spacer(1, 12)])
 
 document.save(str(output.with_suffix(".docx")))
@@ -201,7 +201,7 @@ document.save(str(output.with_suffix(".docx")))
 def footer(canvas, doc):
     canvas.saveState()
     canvas.setFont("Helvetica", 8)
-    canvas.setFillColor(colors.HexColor("#655b60"))
+    canvas.setFillColor(colors.HexColor("#555555"))
     canvas.drawString(0.7 * inch, 0.32 * inch, f"Assignment 3 | {args.name} | {args.group}")
     canvas.drawRightString(7.57 * inch, 0.32 * inch, str(doc.page))
     canvas.restoreState()
