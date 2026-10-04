@@ -3,31 +3,27 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A fan-made listening guide to Jamie Paige: colorful pop, vocal synths, and three albums to explore.">
-  <meta name="theme-color" content="#f5e9e7">
-  <title>Jamie Paige — The Listening Room</title>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%238f274a'/%3E%3Ctext x='32' y='46' text-anchor='middle' font-size='48' fill='%23fffaf5'%3E✳%3C/text%3E%3C/svg%3E">
+  <meta name="description" content="A student fan page about Jamie Paige and her music.">
+  <title>Jamie Paige Fan Page</title>
+  <link rel="icon" href="assets/constant-companions.jpg" type="image/jpeg">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
 </head>
 <body id="top">
-  <a class="visually-hidden-focusable skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
-    <nav class="navbar navbar-expand-lg py-3" aria-label="Main navigation">
+  <a class="visually-hidden-focusable" href="#main">Skip to content</a>
+  <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom" aria-label="Main navigation">
       <div class="container">
-        <a class="navbar-brand d-flex align-items-center gap-2" href="#top">
-          <span class="brand-flower" aria-hidden="true">✳</span> the listening room
-        </a>
+        <a class="navbar-brand" href="#top">Jamie Paige</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#site-nav" aria-controls="site-nav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="site-nav">
-          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3 pt-3 pt-lg-0">
-            <li class="nav-item"><a class="nav-link" href="#about">The artist</a></li>
-            <li class="nav-item"><a class="nav-link" href="#values">Listening notes</a></li>
-            <li class="nav-item"><a class="nav-link" href="#releases">The records</a></li>
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#values">Music</a></li>
+            <li class="nav-item"><a class="nav-link" href="#releases">Albums</a></li>
             <li class="nav-item"><a class="nav-link" href="#questions">FAQ</a></li>
-            <li class="nav-item"><a class="nav-link official-link" href="https://jamies.page/">Official website <span aria-hidden="true">↗</span></a></li>
           </ul>
         </div>
       </div>
@@ -35,106 +31,79 @@
   </header>
 
   <main id="main">
-    <!-- Task 2: Bootstrap columns and ordering. The introduction comes first on phones. -->
-    <section class="hero section-space" id="about" aria-labelledby="artist-title">
+    <!-- Bootstrap layout: text first on phones, artwork on the left on desktop. -->
+    <section class="py-4" id="about" aria-labelledby="artist-title">
       <div class="container">
-        <div class="edition-line d-flex justify-content-between gap-3 mb-4 pb-3">
-          <span>01 / ARTIST SPOTLIGHT</span>
-          <span class="desktop-note d-none d-md-inline">INDEPENDENT SOUNDS. ON REPEAT.</span>
-        </div>
-        <div class="row align-items-center g-4 g-lg-5">
-          <div class="hero-copy col-12 col-lg-6 order-1 order-lg-2">
-            <p class="eyebrow mb-3">A fan-made listening guide</p>
-            <h1 id="artist-title">Jamie<br><em>Paige.</em><span class="title-star" aria-hidden="true">✳</span></h1>
-            <p class="hero-intro mt-4">Big feelings.<br>Bright synths. Endless repeat.</p>
-            <p class="muted-copy mb-4">Step into the music of Jamie Paige, where electronic pop and synthesized voices meet a very human heart.</p>
-            <div class="d-flex flex-wrap align-items-center gap-3">
-              <a class="btn btn-rose px-4 py-3" href="#releases">Meet the music <span class="ms-2" aria-hidden="true">↓</span></a>
-              <a class="quiet-link py-2" href="https://jamiepaige.bandcamp.com/">Visit Bandcamp <span aria-hidden="true">↗</span></a>
-            </div>
-            <p class="genre-line mt-4 mb-0">SYNTH POP <span aria-hidden="true">/</span> INDIE POP <span aria-hidden="true">/</span> VOCAL SYNTH</p>
+        <div class="row align-items-center g-4">
+          <div class="hero-copy col-12 col-lg-8 order-1 order-lg-2">
+            <h1 id="artist-title">Jamie Paige</h1>
+            <p class="desktop-note d-none d-md-block text-secondary">Unofficial fan page</p>
+            <p>Jamie Paige makes electronic pop and vocal-synth music. This page introduces her music and three of her albums.</p>
+            <a class="btn btn-primary" href="#releases">View albums</a>
           </div>
-          <div class="hero-art col-12 col-lg-6 order-2 order-lg-1">
-            <figure class="record-sleeve mb-0">
-              <img class="img-fluid w-100" src="assets/constant-companions.jpg" alt="Constant Companions cover with white line-drawn figures against red and green woodland" width="700" height="700" fetchpriority="high">
-              <figcaption class="d-flex justify-content-between align-items-center gap-3 p-3">
-                <div><span class="eyebrow">In the spotlight</span><br><span class="sleeve-title">Constant Companions</span></div>
-                <span class="record-mark" aria-hidden="true">◎</span>
-              </figcaption>
+          <div class="hero-art col-12 col-lg-4 order-2 order-lg-1">
+            <figure class="mb-0">
+              <img class="img-fluid" src="assets/constant-companions.jpg" alt="Constant Companions album cover with illustrated characters" width="700" height="700">
+              <figcaption class="small text-secondary mt-2">Constant Companions (2024)</figcaption>
             </figure>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Task 1: this entire section uses custom classes and CSS only, without Bootstrap classes. -->
-    <section class="listening-notes" id="values" aria-labelledby="notes-title">
-      <div class="notes-shell">
-        <p class="notes-label">A FEW THINGS TO LISTEN FOR</p>
-        <h2 id="notes-title">A little synthetic.<br><em>A lot of feeling.</em></h2>
+    <!-- Task 1: custom CSS Grid and media queries, without Bootstrap classes. -->
+    <section class="music-section" id="values" aria-labelledby="music-title">
+      <div class="music-content">
+        <h2 id="music-title">About the music</h2>
         <div class="values-grid">
           <article class="value-item">
-            <span class="note-number">01 / THE SOUND</span>
-            <h3>Color in every layer.</h3>
-            <p>Follow the bright melodies, then listen a little closer. The small details make a second play feel like a new discovery.</p>
+            <h3>Electronic pop</h3>
+            <p>Jamie’s music includes electronic pop, synth-pop and indie pop.</p>
           </article>
           <article class="value-item">
-            <span class="note-number">02 / THE VOICES</span>
-            <h3>Something almost human.</h3>
-            <p>Synthesized vocals are part of the expression. On <cite>Constant Companions</cite>, listen for voices made with Synthesizer V and VOCALOID6.</p>
+            <h3>Synthesized vocals</h3>
+            <p>Constant Companions uses singing voices made with Synthesizer V and VOCALOID6.</p>
           </article>
           <article class="value-item">
-            <span class="note-number">03 / THE FEELING</span>
-            <h3>Keep a song close.</h3>
-            <p>Headphones on, distractions off. Give a whole record a little space and find the track you want to carry into the rest of your day.</p>
+            <h3>Albums</h3>
+            <p>The albums below show releases from 2017, 2021 and 2024. Each links to the official Bandcamp page.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Task 2: 12/12, 6/12, and 4/12 columns give one, two, and three cards per row. -->
-    <section class="releases section-space" id="releases" aria-labelledby="releases-title">
+    <!-- Task 2: Bootstrap cards, one per row on phones, two on tablets, three on laptops. -->
+    <section class="py-4" id="releases" aria-labelledby="albums-title">
       <div class="container">
-        <div class="row align-items-end gy-3 mb-4">
-          <div class="col-12 col-md-8">
-            <p class="eyebrow">02 / ON THE RECORD</p>
-            <h2 id="releases-title">Find your <em>next repeat.</em></h2>
-          </div>
-          <div class="col-12 col-md-4 text-md-end">
-            <a class="quiet-link" href="https://jamiepaige.bandcamp.com/music">Explore the discography <span aria-hidden="true">↗</span></a>
-          </div>
-        </div>
+        <h2 class="h3 mb-3" id="albums-title">Albums</h2>
         <div class="row g-4">
           <div class="col-12 col-md-6 col-xl-4">
             <article class="card release-card h-100">
               <img src="assets/constant-companions.jpg" class="card-img-top" alt="Constant Companions album artwork" width="700" height="700" loading="lazy">
-              <div class="card-body d-flex flex-column px-0 pb-0">
-                <p class="release-meta d-flex justify-content-between"><span>ALBUM / 2024</span><span>01</span></p>
-                <h3 class="card-title">Constant Companions</h3>
-                <p class="card-text muted-copy">Start here: a colorful meeting of electronic pop and synthesized voices.</p>
-                <a class="record-link mt-auto py-2" href="https://jamiepaige.bandcamp.com/album/constant-companions" aria-label="Listen on Bandcamp: Constant Companions">Listen on Bandcamp <span aria-hidden="true">↗</span></a>
+              <div class="card-body">
+                <h3 class="card-title h5">Constant Companions</h3>
+                <p class="card-text">Released in 2024.</p>
+                <a href="https://jamiepaige.bandcamp.com/album/constant-companions" aria-label="Listen on Bandcamp: Constant Companions">Listen on Bandcamp</a>
               </div>
             </article>
           </div>
           <div class="col-12 col-md-6 col-xl-4">
             <article class="card release-card h-100">
               <img src="assets/bittersweet.jpg" class="card-img-top" alt="Bittersweet album artwork" width="700" height="700" loading="lazy">
-              <div class="card-body d-flex flex-column px-0 pb-0">
-                <p class="release-meta d-flex justify-content-between"><span>ALBUM / 2021</span><span>02</span></p>
-                <h3 class="card-title">Bittersweet</h3>
-                <p class="card-text muted-copy">Take a step back through the catalog with this earlier full-length release.</p>
-                <a class="record-link mt-auto py-2" href="https://jamiepaige.bandcamp.com/album/bittersweet" aria-label="Listen on Bandcamp: Bittersweet">Listen on Bandcamp <span aria-hidden="true">↗</span></a>
+              <div class="card-body">
+                <h3 class="card-title h5">Bittersweet</h3>
+                <p class="card-text">Released in 2021.</p>
+                <a href="https://jamiepaige.bandcamp.com/album/bittersweet" aria-label="Listen on Bandcamp: Bittersweet">Listen on Bandcamp</a>
               </div>
             </article>
           </div>
           <div class="col-12 col-md-6 col-xl-4">
             <article class="card release-card h-100">
               <img src="assets/autumn-every-day.jpg" class="card-img-top" alt="Autumn Every Day album artwork" width="700" height="700" loading="lazy">
-              <div class="card-body d-flex flex-column px-0 pb-0">
-                <p class="release-meta d-flex justify-content-between"><span>ALBUM / 2017</span><span>03</span></p>
-                <h3 class="card-title">Autumn Every Day</h3>
-                <p class="card-text muted-copy">Go a little further back and spend some time with another chapter of Jamie’s music.</p>
-                <a class="record-link mt-auto py-2" href="https://jamiepaige.bandcamp.com/album/autumn-every-day" aria-label="Listen on Bandcamp: Autumn Every Day">Listen on Bandcamp <span aria-hidden="true">↗</span></a>
+              <div class="card-body">
+                <h3 class="card-title h5">Autumn Every Day</h3>
+                <p class="card-text">Released in 2017.</p>
+                <a href="https://jamiepaige.bandcamp.com/album/autumn-every-day" aria-label="Listen on Bandcamp: Autumn Every Day">Listen on Bandcamp</a>
               </div>
             </article>
           </div>
@@ -142,40 +111,32 @@
       </div>
     </section>
 
-    <section class="questions section-space" id="questions" aria-labelledby="questions-title">
+    <section class="py-4" id="questions" aria-labelledby="questions-title">
       <div class="container">
-        <div class="row g-4 g-lg-5">
-          <div class="col-12 col-lg-5">
-            <h2 id="questions-title">A few <em>liner notes.</em></h2>
-            <p class="muted-copy mt-3">New to the music? Here’s a place to start.</p>
-            <span class="question-flower d-none d-lg-block" aria-hidden="true">✳</span>
+        <h2 class="h3 mb-3" id="questions-title">Frequently asked questions</h2>
+        <div class="accordion" id="listening-faq">
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#answer-start" aria-expanded="true" aria-controls="answer-start">Where can I listen?</button>
+            </h3>
+            <div id="answer-start" class="accordion-collapse collapse show" data-bs-parent="#listening-faq">
+              <div class="accordion-body">The album links above go to <a href="https://jamiepaige.bandcamp.com/">Jamie’s Bandcamp page</a>, where you can listen to the music.</div>
+            </div>
           </div>
-          <div class="col-12 col-lg-7">
-            <div class="accordion accordion-flush" id="listening-faq">
-              <div class="accordion-item">
-                <h3 class="accordion-header">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#answer-start" aria-expanded="true" aria-controls="answer-start">Where should I start listening?</button>
-                </h3>
-                <div id="answer-start" class="accordion-collapse collapse show" data-bs-parent="#listening-faq">
-                  <div class="accordion-body">Try <a href="https://jamiepaige.bandcamp.com/album/constant-companions">Constant Companions</a>, then explore the earlier albums above. There’s no required order: choose a cover that catches your eye and press play on Bandcamp.</div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h3 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#answer-synth" aria-expanded="false" aria-controls="answer-synth">What are the synthesized voices?</button>
-                </h3>
-                <div id="answer-synth" class="accordion-collapse collapse" data-bs-parent="#listening-faq">
-                  <div class="accordion-body">Singing-synthesis software lets musicians shape sung notes and words using voicebanks. The <a href="https://jamiepaige.bandcamp.com/album/constant-companions">album credits</a> list Synthesizer V and VOCALOID6, including voices such as Kasane Teto, GUMI, and ANRI.</div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h3 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#answer-official" aria-expanded="false" aria-controls="answer-official">Is this Jamie Paige’s official website?</button>
-                </h3>
-                <div id="answer-official" class="accordion-collapse collapse" data-bs-parent="#listening-faq">
-                  <div class="accordion-body">This is an unofficial fan page made by Miras Zhumazhan for a web design assignment. Find Jamie’s own links and updates at <a href="https://jamies.page/">jamies.page</a>. Album artwork belongs to its credited creators.</div>
-                </div>
-              </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#answer-synth" aria-expanded="false" aria-controls="answer-synth">What are synthesized vocals?</button>
+            </h3>
+            <div id="answer-synth" class="accordion-collapse collapse" data-bs-parent="#listening-faq">
+              <div class="accordion-body">They are singing voices produced with software. The musician chooses the notes and words. The <a href="https://jamiepaige.bandcamp.com/album/constant-companions">Constant Companions credits</a> list the voices used on the album.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#answer-official" aria-expanded="false" aria-controls="answer-official">Is this an official website?</button>
+            </h3>
+            <div id="answer-official" class="accordion-collapse collapse" data-bs-parent="#listening-faq">
+              <div class="accordion-body">This is a student fan page. Jamie Paige’s official website is <a href="https://jamies.page/">jamies.page</a>.</div>
             </div>
           </div>
         </div>
@@ -183,21 +144,13 @@
     </section>
   </main>
 
-  <footer class="site-footer py-4">
-    <div class="container">
-      <div class="row align-items-center gy-3">
-        <div class="col-12 col-md-7">
-          <p class="footer-title mb-2"><span aria-hidden="true">✳</span> Keep the music close.</p>
-          <p class="small mb-0">A fan page by Miras Zhumazhan · IT-2512<br>Artwork © its respective creators. <a href="assets/CREDITS.md">Sources &amp; artwork credits</a></p>
-        </div>
-        <div class="col-12 col-md-5 text-md-end">
-          <a class="footer-link me-3" href="https://jamiepaige.bandcamp.com/">Bandcamp <span aria-hidden="true">↗</span></a>
-          <a class="footer-link" href="#top">Back to top <span aria-hidden="true">↑</span></a>
-        </div>
-      </div>
+  <footer class="border-top py-3">
+    <div class="container d-flex flex-wrap justify-content-between gap-2 small">
+      <p class="mb-0">Miras Zhumazhan · IT-2512 · Unofficial fan page</p>
+      <a href="assets/CREDITS.md">Artwork credits</a>
+      <a href="#top">Back to top</a>
     </div>
   </footer>
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>

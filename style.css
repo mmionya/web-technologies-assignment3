@@ -1,95 +1,69 @@
-:root {
-  --paper: #fffaf5;
-  --blush: #f5e9e7;
-  --ink: #35252b;
-  --muted: #725e65;
-  --rose: #8f274a;
-  --line: #d8c7ca;
-  --bs-body-font-family: Arial, Helvetica, sans-serif;
-  --bs-body-color: var(--ink);
-  --bs-body-bg: var(--paper);
+body {
+  font-family: Arial, sans-serif;
 }
 
-html { scroll-padding-top: 1.5rem; }
-body { margin: 0; }
-a { color: var(--rose); text-underline-offset: .25em; }
-a:hover { color: var(--ink); }
-a:focus-visible, button:focus-visible { outline: 3px solid var(--rose); outline-offset: 4px; }
-img { max-width: 100%; height: auto; }
-h1, h2, h3 { color: var(--ink); }
-h2 { font: 400 clamp(2.25rem, 4vw, 3.5rem)/1.12 Georgia, serif; letter-spacing: -.04em; }
-.section-space { padding-block: clamp(2.5rem, 6vw, 5rem); }
-.eyebrow, .edition-line, .genre-line, .release-meta { font: .7rem/1.5 "Courier New", monospace; letter-spacing: .1em; font-weight: 700; }
-.eyebrow { color: var(--rose); }
-.muted-copy { color: var(--muted); line-height: 1.7; }
-.quiet-link { font-size: .85rem; font-weight: 600; }
-.skip-link:focus { display: block; padding: 1rem; text-align: center; background: var(--paper); }
+img {
+  max-width: 100%;
+  height: auto;
+}
 
-/* Bootstrap owns the layout; these rules customize its appearance. */
-.site-header { border-bottom: 1px solid var(--line); background: var(--blush); }
-.navbar-brand { font: 700 1rem Georgia, serif; color: var(--ink); letter-spacing: -.025em; }
-.brand-flower { color: var(--rose); font: 2rem/1 Arial, sans-serif; }
-.navbar { --bs-navbar-color: var(--muted); --bs-navbar-hover-color: var(--rose); }
-.navbar .nav-link { font-size: .8rem; padding-block: .75rem; }
-.navbar .official-link { color: var(--rose); font-weight: 700; }
-.navbar-toggler { border-color: var(--line); border-radius: .25rem; padding: .5rem; }
-.navbar-toggler:focus { box-shadow: 0 0 0 .2rem var(--line); }
-.navbar-toggler-icon { width: 1.25em; height: 1.25em; }
-.hero { background: var(--blush); }
-.edition-line { border-bottom: 1px solid var(--line); color: var(--muted); }
-.hero h1 { font: 400 clamp(4.75rem, 8.5vw, 8rem)/.88 Georgia, serif; letter-spacing: -.075em; }
-.hero h1 em { color: var(--rose); }
-.title-star { display: inline-block; font: .4em/1 Arial, sans-serif; color: var(--rose); vertical-align: top; margin-left: .2em; }
-.hero-intro { font-size: 1.25rem; line-height: 1.35; letter-spacing: -.025em; }
-.genre-line { color: var(--muted); font-size: .65rem; }
-.genre-line span { margin-inline: .5em; }
-.btn-rose { --bs-btn-color: var(--paper); --bs-btn-bg: var(--rose); --bs-btn-border-color: var(--rose); --bs-btn-hover-color: var(--paper); --bs-btn-hover-bg: var(--ink); --bs-btn-hover-border-color: var(--ink); --bs-btn-active-color: var(--paper); --bs-btn-active-bg: var(--ink); --bs-btn-active-border-color: var(--ink); border-radius: .2rem; font-size: .85rem; font-weight: 600; }
-.record-sleeve { padding: .5rem .5rem 0; background: var(--paper); border: 1px solid var(--line); box-shadow: .5rem .5rem 0 #e5d3d6; }
-.record-sleeve img { aspect-ratio: 1; object-fit: cover; }
-.sleeve-title { font: 1.1rem Georgia, serif; }
-.record-mark { color: var(--rose); font-size: 2.5rem; line-height: 1; }
+a:focus-visible, button:focus-visible {
+  outline: 3px solid #0d6efd;
+  outline-offset: 3px;
+}
 
-/* Task 1: mobile first, one column. No Bootstrap selectors or layout dependencies. */
-.listening-notes { background: var(--paper); padding-block: 3rem; }
-.notes-shell { width: 90%; margin-inline: auto; }
-.notes-label { color: var(--rose); font: 700 .7rem/1.5 "Courier New", monospace; letter-spacing: .1em; margin: 0 0 1rem; }
-.listening-notes h2 { font: 400 2.25rem/1.15 Georgia, serif; letter-spacing: -.04em; margin: 0 0 2rem; }
-.values-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.5rem; }
-.value-item { border-top: 1px solid var(--line); padding-top: 1.25rem; }
-.note-number { color: var(--rose); font: 700 .7rem/1.5 "Courier New", monospace; letter-spacing: .08em; }
-.value-item h3 { font: 400 1.45rem/1.3 Georgia, serif; margin: 1rem 0 .75rem; }
-.value-item p { color: var(--muted); font-size: .95rem; line-height: 1.75; margin: 0; }
+/* Task 1: this section uses our own CSS instead of Bootstrap classes. */
+.music-section {
+  padding: 2rem 0;
+  background: #f5f5f5;
+}
 
-/* Tablet: two columns, plus a larger heading and more space. */
+.music-content {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.music-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Start with one column on a phone. */
+.values-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1rem;
+}
+
+.value-item {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  background: white;
+}
+
+.value-item h3 {
+  font-size: 1.2rem;
+}
+
+.value-item p {
+  margin-bottom: 0;
+}
+
+/* Tablet: two columns, a bigger heading and more space between items. */
 @media (min-width: 768px) {
-  .listening-notes { padding-block: 4rem; }
-  .listening-notes h2 { font-size: 3rem; }
-  .values-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem; }
+  .values-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+
+  .music-section h2 {
+    font-size: 1.75rem;
+  }
 }
 
-/* Laptop: three columns. Fractional tracks share the available width. */
+/* Laptop: three columns. */
 @media (min-width: 1200px) {
-  .listening-notes { padding-block: 5rem; }
-  .values-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 3rem; }
+  .values-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
-
-.releases { background: var(--blush); border-block: 1px solid var(--line); }
-.release-card { --bs-card-bg: transparent; --bs-card-border-width: 0; --bs-card-border-radius: 0; }
-.release-card .card-img-top { aspect-ratio: 1; object-fit: cover; border: 1px solid var(--line); border-radius: 0; }
-.release-meta { color: var(--rose); margin-bottom: .75rem; }
-.release-card h3 { font: 400 1.6rem/1.2 Georgia, serif; letter-spacing: -.025em; }
-.release-card .card-text { font-size: .9rem; }
-.record-link { display: flex; justify-content: space-between; gap: 1rem; border-bottom: 1px solid var(--line); font-size: .8rem; font-weight: 700; text-decoration: none; }
-.record-link:hover { border-color: var(--rose); text-decoration: underline; }
-.questions { background: var(--paper); }
-.question-flower { color: var(--rose); font: 6rem/1 Arial, sans-serif; margin-top: 1.5rem; }
-.accordion { --bs-accordion-bg: transparent; --bs-accordion-color: var(--muted); --bs-accordion-border-color: var(--line); --bs-accordion-btn-color: var(--ink); --bs-accordion-active-color: var(--rose); --bs-accordion-active-bg: transparent; --bs-accordion-btn-focus-box-shadow: 0 0 0 .2rem var(--line); }
-.accordion-button { padding: 1.5rem .25rem; font-size: .95rem; font-weight: 600; line-height: 1.5; }
-.accordion-body { padding: 0 .25rem 1.5rem; font-size: .9rem; line-height: 1.8; }
-.site-footer { color: var(--paper); background: var(--ink); }
-.footer-title { font: 1.5rem Georgia, serif; }
-.footer-title span { color: #f3b5ca; margin-right: .3em; }
-.site-footer a { color: var(--paper); }
-.site-footer a:focus-visible { outline-color: var(--paper); }
-.site-footer .small { color: #e3cfd5; font-size: .75rem; line-height: 1.8; }
-.footer-link { font-size: .8rem; }
